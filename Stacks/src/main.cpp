@@ -6,6 +6,7 @@
  */
 
 #include "AStack.h"
+#include "LStack.h"
 
 #include<iostream>
 using namespace std;
@@ -20,9 +21,9 @@ void testStack(Stack<int>* stack){
 
 int main(){
 	AStack<int> stack1;
+	LStack<int> stack2;
 
 	testStack(&stack1);
+	testStack(&stack2);
 	return 0;
 }
-
-

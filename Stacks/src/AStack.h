@@ -33,7 +33,7 @@ public:
 		}
 	}
 	AStack& operator=(const AStack<Elem>& toCopy) {
-		if (this != toCopy) {
+		if (this != &toCopy) {
 			delete[] container;
 			containerSize = toCopy.containerSize;
 			top = toCopy.top;
