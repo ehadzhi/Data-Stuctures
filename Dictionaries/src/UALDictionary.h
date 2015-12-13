@@ -8,11 +8,12 @@
 #ifndef UALDICTIONARY_H_
 #define UALDICTIONARY_H_
 
+#include"Dictionary.h"
 #include"KeyValPair.h"
 #include"AList.h"
 
 template<typename Key, typename Elem>
-class UALDictionary {
+class UALDictionary : public Dictionary<Key,Elem>{
 	AList<KeyValPair<Key, Elem>>* list;
 public:
 	UALDictionary();
