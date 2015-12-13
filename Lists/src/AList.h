@@ -158,6 +158,9 @@ inline bool AList<Elem>::append(const Elem& appndElement) {
 
 template<typename Elem>
 inline Elem AList<Elem>::remove() {
+	if( this->length() <= 0){
+		cout<< " Removing from empty list"<<endl;
+	}
 	Elem toReturn = *(container + currentPosition);
 	for(int index = currentPosition;index < numElements -1;index++){
 		*(container + index) = *(container + index + 1);
