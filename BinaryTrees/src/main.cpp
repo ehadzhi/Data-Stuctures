@@ -7,15 +7,21 @@
 
 #include<iostream>
 using namespace std;
-#include"SBinNode.h"
+#include "BinSTree.h"
 
 int main(){
-	int x = 5,y = 2;
-	int* a = &x;
-	SBinNode<int,int> node(5,6);
+	BinSTree<int,char> tree;
 
-	cout<<node.getKey();
+	for(int i = 0;i < 60;i++){
+		tree.insert(i,(i + 'A'));
+	}
 
+	tree.print();
+	tree.removeAny();
+	tree.print();
+	char toRem;
+	tree.remove(7,toRem);
+	tree.print();
 	return 0;
 }
 
