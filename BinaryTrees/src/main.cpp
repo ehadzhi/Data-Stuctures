@@ -9,6 +9,8 @@
 using namespace std;
 #include "BinSTree.h"
 #include "Heap.h"
+#include"FrequencyTable.h"
+#include"HuffmanTree.h"
 
 void testTree() {
 	BinSTree<int, char> tree;
@@ -24,16 +26,8 @@ void testTree() {
 }
 
 int main(){
-	Heap<int> heap;
-
-	for(int i = 0;i < 30;i++){
-		heap.insert(i);
-	}
-
-	for(int i = 0;i < 30;i++){
-		cout<<heap.removeTop()<<" "<<heap.size()<<endl;
-	}
-
+	FrequencyTable table("alabalatralalal");
+	HuffmanTree tree(table);
 	return 0;
 }
 
