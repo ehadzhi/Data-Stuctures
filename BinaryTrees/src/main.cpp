@@ -11,6 +11,7 @@ using namespace std;
 #include "Heap.h"
 #include"FrequencyTable.h"
 #include"HuffmanTree.h"
+#include"CodingTable.h"
 
 void testTree() {
 	BinSTree<int, char> tree;
@@ -26,8 +27,14 @@ void testTree() {
 }
 
 int main(){
-	FrequencyTable table("alabalatralalal");
+	string allAsciiTest;
+	for(int i = 0;i < 128;i++){
+		allAsciiTest+=i;
+	}
+	FrequencyTable table(" plsvnmlskdvnsd");
 	HuffmanTree tree(table);
+
+	cout<<tree;
 	return 0;
 }
 

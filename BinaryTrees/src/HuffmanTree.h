@@ -14,12 +14,14 @@
 #include<iostream>
 #include"HuffmanNodes.h"
 #include"FrequencyTable.h"
+#include"CodingTable.h"
 
 using namespace std;
 
 class HuffmanTree {
 	HuffmanNode* root;
 	HuffmanNode* buildHuffmanTree(const FrequencyTable& freqTable);
+	CodingTable codingTable;
 public:
 	HuffmanTree(const FrequencyTable&);
 	void encode(const string&) const;

@@ -42,8 +42,10 @@ HuffmanNode* HuffmanTree::buildHuffmanTree(const FrequencyTable& freqTable) {
 
 HuffmanTree::HuffmanTree(const FrequencyTable& freqTable) {
 	root = buildHuffmanTree(freqTable);
+	codingTable = CodingTable(*root);
 }
 
 ostream& operator<<(ostream& os, const HuffmanTree& tree){
-
+	os<<tree.codingTable;
+	return os;
 }
